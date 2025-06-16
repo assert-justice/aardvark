@@ -1,0 +1,36 @@
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://bs4bhy03sinky"]
+
+[ext_resource type="Texture2D" uid="uid://cahul3ysqpb78" path="res://assets/sprites/Crate_Brown.png" id="1_btyyc"]
+[ext_resource type="Texture2D" uid="uid://6bnhl2xqoekw" path="res://assets/sprites/Ground_Dirt.png" id="2_6n06g"]
+[ext_resource type="Texture2D" uid="uid://dwyj86kxa51ue" path="res://assets/sprites/Wall_Black.png" id="3_7x14k"]
+[ext_resource type="Texture2D" uid="uid://cn5ueeo7uhyrr" path="res://assets/sprites/Ground_Grass.png" id="4_6n06g"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lr7nw"]
+texture = ExtResource("1_btyyc")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l0r53"]
+texture = ExtResource("2_6n06g")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sxc0i"]
+texture = ExtResource("3_7x14k")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7x14k"]
+texture = ExtResource("4_6n06g")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_lr7nw")
+sources/1 = SubResource("TileSetAtlasSource_l0r53")
+sources/2 = SubResource("TileSetAtlasSource_sxc0i")
+sources/3 = SubResource("TileSetAtlasSource_7x14k")
