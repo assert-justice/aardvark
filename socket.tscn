@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ppjkiwmcrqtr"]
+
+[ext_resource type="Script" uid="uid://clvncxs6ad0mq" path="res://scripts/Socket.cs" id="1_ad3ct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lciwy"]
+size = Vector2(64, 64)
+
+[node name="Socket" type="Area2D" groups=["Socket"]]
+script = ExtResource("1_ad3ct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_lciwy")
+metadata/_edit_lock_ = true

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://py3wpf07fmls"]
+[gd_scene load_steps=7 format=4 uid="uid://py3wpf07fmls"]
 
 [ext_resource type="TileSet" uid="uid://bs4bhy03sinky" path="res://assets/new_tile_set.tres" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://bjc3m0nhdafi4" path="res://scripts/Player.cs" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://civkduyrsksdg" path="res://assets/sprites/EndPoint_Red.png" id="3_7jktm"]
 [ext_resource type="PackedScene" uid="uid://chdoyeh4ct56c" path="res://battery.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://ppjkiwmcrqtr" path="res://socket.tscn" id="5_7jktm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fc0e3"]
 radius = 16.0078
@@ -43,3 +44,39 @@ position = Vector2(407, 256)
 
 [node name="Battery2" parent="." instance=ExtResource("4_fc0e3")]
 position = Vector2(457, 386)
+
+[node name="Socket" parent="." instance=ExtResource("5_7jktm")]
+position = Vector2(544, 287)
+SocketName = "Drill"
+
+[node name="Socket2" parent="." instance=ExtResource("5_7jktm")]
+position = Vector2(544, 95)
+SocketName = "Forward"
+
+[node name="Socket3" parent="." instance=ExtResource("5_7jktm")]
+position = Vector2(544, 479)
+SocketName = "Back"
+
+[node name="Socket4" parent="." instance=ExtResource("5_7jktm")]
+position = Vector2(160, 287)
+SocketName = "Left"
+
+[node name="Socket5" parent="." instance=ExtResource("5_7jktm")]
+position = Vector2(928, 287)
+SocketName = "Left"
+
+[node name="Socket6" parent="." instance=ExtResource("5_7jktm")]
+position = Vector2(96, 95)
+SocketName = "ULTurret"
+
+[node name="Socket7" parent="." instance=ExtResource("5_7jktm")]
+position = Vector2(96, 479)
+SocketName = "BLTurret"
+
+[node name="Socket8" parent="." instance=ExtResource("5_7jktm")]
+position = Vector2(992, 479)
+SocketName = "BRTurret"
+
+[node name="Socket9" parent="." instance=ExtResource("5_7jktm")]
+position = Vector2(992, 95)
+SocketName = "URTurret"

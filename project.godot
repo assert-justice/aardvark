@@ -21,6 +21,7 @@ project/assembly_name="Aardvark"
 [global_group]
 
 BoxManager=""
+Socket=""
 
 [input]
 
