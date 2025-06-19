@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://chdoyeh4ct56c"]
+
+[ext_resource type="Texture2D" uid="uid://cahul3ysqpb78" path="res://assets/sprites/Crate_Brown.png" id="1_0ps0c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryrav"]
+size = Vector2(63, 64)
+
+[node name="Battery" type="RigidBody2D"]
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ryrav")
+metadata/_edit_lock_ = true
+
+[node name="CrateBrown" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ps0c")
+metadata/_edit_lock_ = true
