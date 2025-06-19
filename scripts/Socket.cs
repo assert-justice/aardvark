@@ -3,7 +3,7 @@ using System;
 
 public partial class Socket : Area2D
 {
-	[Export] string SocketName;
+	[Export] public string SocketName;
 	int Batteries = 0;
 	public override void _Ready()
 	{
@@ -21,5 +21,9 @@ public partial class Socket : Area2D
 				Batteries--;
 			}
 		};
+	}
+	public bool IsPowered()
+	{
+		return Batteries > 0;
 	}
 }

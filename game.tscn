@@ -41,7 +41,7 @@ SocketName = "Left"
 
 [node name="Socket5" parent="." instance=ExtResource("5_7jktm")]
 position = Vector2(928, 287)
-SocketName = "Left"
+SocketName = "Right"
 
 [node name="Socket6" parent="." instance=ExtResource("5_7jktm")]
 position = Vector2(96, 95)
