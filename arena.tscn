@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=4 uid="uid://dbg707xbg651t"]
+[gd_scene load_steps=9 format=4 uid="uid://dbg707xbg651t"]
 
 [ext_resource type="TileSet" uid="uid://bs4bhy03sinky" path="res://assets/new_tile_set.tres" id="1_ubfh8"]
 [ext_resource type="Script" uid="uid://byvvmm84glef7" path="res://scripts/Mech.cs" id="2_27ga2"]
 [ext_resource type="PackedScene" uid="uid://py3wpf07fmls" path="res://game.tscn" id="2_444vf"]
+[ext_resource type="PackedScene" uid="uid://c7wscj1jkfhtc" path="res://turret.tscn" id="4_sbb53"]
+[ext_resource type="Script" uid="uid://b8s5qqwj3itam" path="res://scripts/Enemy.cs" id="6_pbtuc"]
+[ext_resource type="Texture2D" uid="uid://civkduyrsksdg" path="res://assets/sprites/EndPoint_Red.png" id="6_sbb53"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_444vf"]
 size = Vector2(566, 309)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pbtuc"]
 
 [node name="Arena" type="Node2D"]
 
@@ -41,3 +46,16 @@ render_target_update_mode = 4
 
 [node name="Game" parent="Mech/SubViewportContainer/SubViewport" instance=ExtResource("2_444vf")]
 metadata/_edit_lock_ = true
+
+[node name="ULTurret" parent="Mech" instance=ExtResource("4_sbb53")]
+position = Vector2(-257, -124)
+
+[node name="Enemy" type="CharacterBody2D" parent="." groups=["Enemy"]]
+position = Vector2(428, 407)
+script = ExtResource("6_pbtuc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("CircleShape2D_pbtuc")
+
+[node name="EndPointRed" type="Sprite2D" parent="Enemy"]
+texture = ExtResource("6_sbb53")

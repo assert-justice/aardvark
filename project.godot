@@ -27,6 +27,7 @@ project/assembly_name="Aardvark"
 
 BoxManager=""
 Socket=""
+Enemy=""
 
 [input]
 

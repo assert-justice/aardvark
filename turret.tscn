@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7wscj1jkfhtc"]
+
+[ext_resource type="Script" uid="uid://bi2qgjmf8d3gp" path="res://scripts/Turret.cs" id="1_tjdg3"]
+[ext_resource type="Texture2D" uid="uid://cn5ueeo7uhyrr" path="res://assets/sprites/Ground_Grass.png" id="2_c5apd"]
+
+[node name="Turret" type="Node2D"]
+script = ExtResource("1_tjdg3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+scale = Vector2(1, 0.1)
+texture = ExtResource("2_c5apd")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(1000, 0)

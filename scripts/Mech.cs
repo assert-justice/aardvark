@@ -7,6 +7,7 @@ public partial class Mech : CharacterBody2D
     [Export] float TurnSpeed = 1;
     [Export] float Speed = 300;
     Dictionary<string, Socket> sockets = [];
+    Turret ulTurret;
     public override void _Ready()
     {
         foreach (var node in GetTree().GetNodesInGroup("Socket"))
@@ -16,6 +17,7 @@ public partial class Mech : CharacterBody2D
                 sockets.Add(socket.SocketName, socket);
             }
         }
+        ulTurret = GetNode<Turret>("ULTurret");
     }
     public override void _PhysicsProcess(double delta)
     {
@@ -28,9 +30,9 @@ public partial class Mech : CharacterBody2D
         if (IsPowered("Forward")) move -= 1;
         if (IsPowered("Back")) move += 1;
         var dp = Transform.BasisXform(new(0, move));
-        // GD.Print(dp);
         Velocity = dp * Speed;
         MoveAndSlide();
+        ulTurret.SetPowered(IsPowered("ULTurret"));
     }
     bool IsPowered(string name)
     {
