@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://clvncxs6ad0mq" path="res://scripts/Socket.cs" id="1_ad3ct"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lciwy"]
-size = Vector2(64, 64)
+size = Vector2(130, 130)
 
 [node name="Socket" type="Area2D" groups=["Socket"]]
 script = ExtResource("1_ad3ct")

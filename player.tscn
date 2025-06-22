@@ -1,27 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://btdo5rq85sxc7"]
+[gd_scene load_steps=5 format=3 uid="uid://btdo5rq85sxc7"]
 
 [ext_resource type="Script" uid="uid://bjc3m0nhdafi4" path="res://scripts/Player.cs" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://civkduyrsksdg" path="res://assets/sprites/EndPoint_Red.png" id="2_i3pqv"]
+[ext_resource type="SpriteFrames" uid="uid://gqq4ygfpswuu" path="res://assets/player_frames.tres" id="3_i3pqv"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fc0e3"]
-radius = 16.0078
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(62, 60)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
-shape = SubResource("CircleShape2D_fc0e3")
+position = Vector2(-2, 9)
+shape = SubResource("RectangleShape2D_i3pqv")
 
 [node name="EndPointRed" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_i3pqv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_i3pqv")
 
 [node name="Arm" type="Node2D" parent="."]
 
 [node name="Hand" type="Sprite2D" parent="Arm"]
-position = Vector2(16, 0)
+position = Vector2(45, 0)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_i3pqv")
 
 [node name="RayCast2D" type="RayCast2D" parent="Arm"]
-target_position = Vector2(30, 0)
+target_position = Vector2(49, 0)

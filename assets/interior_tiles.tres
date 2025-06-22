@@ -1,0 +1,85 @@
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://bn67amvv8sd8w"]
+
+[ext_resource type="Texture2D" uid="uid://itur50lals78" path="res://assets/sprites/Forward_Battery_Slot.png" id="1_hl72n"]
+[ext_resource type="Texture2D" uid="uid://dijy1felsj1dc" path="res://assets/sprites/Reverse_Battery_Slot.png" id="2_4krif"]
+[ext_resource type="Texture2D" uid="uid://bq0nam2igyg8d" path="res://assets/sprites/Turn_Left_Battery_Slot.png" id="3_rjrlg"]
+[ext_resource type="Texture2D" uid="uid://bmq82h6qm6fp7" path="res://assets/sprites/Turn_Right_Battery_Slot.png" id="4_eguns"]
+[ext_resource type="Texture2D" uid="uid://dsgsowow8a01s" path="res://assets/sprites/Turret_Battery_Slot.png" id="5_8rq80"]
+[ext_resource type="Texture2D" uid="uid://1d1kgxady04y" path="res://assets/sprites/Interior-Tileset.png" id="6_5v07t"]
+[ext_resource type="Texture2D" uid="uid://b16j7l3pfa4xl" path="res://assets/sprites/Drill_Battery_Slot.png" id="7_hkkrp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4757o"]
+texture = ExtResource("1_hl72n")
+texture_region_size = Vector2i(130, 130)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_har2c"]
+texture = ExtResource("2_4krif")
+texture_region_size = Vector2i(130, 130)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brxah"]
+texture = ExtResource("3_rjrlg")
+texture_region_size = Vector2i(130, 130)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qiod"]
+texture = ExtResource("4_eguns")
+texture_region_size = Vector2i(130, 130)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yynxy"]
+texture = ExtResource("5_8rq80")
+texture_region_size = Vector2i(130, 130)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fyu86"]
+texture = ExtResource("6_5v07t")
+texture_region_size = Vector2i(130, 130)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-65, -65, 65, -65, 65, 65, -65, 65)
+4:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4vbi"]
+texture = ExtResource("7_hkkrp")
+texture_region_size = Vector2i(130, 130)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(130, 130)
+physics_layer_0/collision_layer = 1
+sources/8 = SubResource("TileSetAtlasSource_fyu86")
+sources/9 = SubResource("TileSetAtlasSource_v4vbi")
+sources/10 = SubResource("TileSetAtlasSource_4757o")
+sources/11 = SubResource("TileSetAtlasSource_har2c")
+sources/12 = SubResource("TileSetAtlasSource_brxah")
+sources/13 = SubResource("TileSetAtlasSource_0qiod")
+sources/14 = SubResource("TileSetAtlasSource_yynxy")
