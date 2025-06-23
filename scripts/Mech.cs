@@ -11,6 +11,7 @@ public partial class Mech : CharacterBody2D
     Turret blTurret;
     Turret urTurret;
     Turret brTurret;
+    Drill drill;
     public override void _Ready()
     {
         foreach (var node in GetTree().GetNodesInGroup("Socket"))
@@ -24,6 +25,7 @@ public partial class Mech : CharacterBody2D
         blTurret = GetNode<Turret>("BLTurret");
         urTurret = GetNode<Turret>("URTurret");
         brTurret = GetNode<Turret>("BRTurret");
+        drill = GetNode<Drill>("Drill");
     }
     public override void _PhysicsProcess(double delta)
     {
@@ -42,6 +44,7 @@ public partial class Mech : CharacterBody2D
         urTurret.SetPowered(IsPowered("URTurret"));
         blTurret.SetPowered(IsPowered("BLTurret"));
         brTurret.SetPowered(IsPowered("BRTurret"));
+        drill.SetPowered(IsPowered("Drill"));
     }
     bool IsPowered(string name)
     {

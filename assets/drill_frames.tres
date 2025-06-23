@@ -1,0 +1,44 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dvo41hti8cevk"]
+
+[ext_resource type="Texture2D" uid="uid://bexxrfmj457df" path="res://assets/sprites/Drill_Head_Sheet.png" id="1_0gjey"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wys6l"]
+atlas = ExtResource("1_0gjey")
+region = Rect2(0, 0, 650, 885)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpx1p"]
+atlas = ExtResource("1_0gjey")
+region = Rect2(650, 0, 650, 885)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02wbj"]
+atlas = ExtResource("1_0gjey")
+region = Rect2(0, 885, 650, 885)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et22w"]
+atlas = ExtResource("1_0gjey")
+region = Rect2(650, 885, 650, 885)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wys6l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpx1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02wbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et22w")
+}],
+"loop": true,
+"name": &"drilling",
+"speed": 5.0
+}]
