@@ -9,6 +9,7 @@ public partial class Player : CharacterBody2D
 	RayCast2D ray;
 	RigidBody2D held = null;
 	AnimatedSprite2D sprite;
+	int dir;
 
 	public override void _Ready()
 	{
@@ -26,7 +27,9 @@ public partial class Player : CharacterBody2D
 			if (move.Length() > 0 && (move.X == 0 || move.Y == 0))
 			{
 				float aim = move.Angle();
-				arm.Rotation = aim;
+				dir = Mathf.FloorToInt(aim * 4 / Mathf.Tau);
+				if (dir == -1) dir = 3;
+				arm.Rotation = dir * Mathf.Pi / 2;
 			}
 			if (move.Length() > 0)
 			{
@@ -43,6 +46,8 @@ public partial class Player : CharacterBody2D
 				{
 					held = rb;
 					held.LinearDamp = 0;
+					string[] strings = ["right", "down", "left", "up"];
+					sprite.Play(strings[dir]);
 				}
 			}
 		}

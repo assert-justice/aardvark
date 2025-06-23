@@ -20,6 +20,7 @@ texture = ExtResource("2_i3pqv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("3_i3pqv")
+animation = &"down"
 
 [node name="Arm" type="Node2D" parent="."]
 
