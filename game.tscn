@@ -18,10 +18,10 @@ tile_set = ExtResource("2_7jktm")
 position = Vector2(330, 188)
 
 [node name="Battery" parent="." instance=ExtResource("4_fc0e3")]
-position = Vector2(407, 256)
+position = Vector2(453, 327)
 
 [node name="Battery2" parent="." instance=ExtResource("4_fc0e3")]
-position = Vector2(457, 386)
+position = Vector2(752, 606)
 
 [node name="Socket" parent="." instance=ExtResource("5_7jktm")]
 position = Vector2(587, 455)
