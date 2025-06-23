@@ -8,12 +8,14 @@ public partial class Player : CharacterBody2D
 	Node2D arm;
 	RayCast2D ray;
 	RigidBody2D held = null;
+	AnimatedSprite2D sprite;
 
 	public override void _Ready()
 	{
 		base._Ready();
 		arm = GetNode<Node2D>("Arm");
 		ray = GetNode<RayCast2D>("Arm/RayCast2D");
+		sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -25,6 +27,14 @@ public partial class Player : CharacterBody2D
 			{
 				float aim = move.Angle();
 				arm.Rotation = aim;
+			}
+			if (move.Length() > 0)
+			{
+				sprite.Play("walk");
+			}
+			else
+			{
+				sprite.Play("default");
 			}
 			Velocity = move * Speed;
 			if (Input.IsActionPressed("grab") && ray.IsColliding())
