@@ -24,7 +24,7 @@ position = Vector2(453, 327)
 position = Vector2(752, 606)
 
 [node name="Socket" parent="." instance=ExtResource("5_7jktm")]
-position = Vector2(587, 455)
+position = Vector2(585, 454)
 SocketName = "Drill"
 
 [node name="Socket2" parent="." instance=ExtResource("5_7jktm")]
@@ -40,7 +40,7 @@ position = Vector2(845, 455)
 SocketName = "Left"
 
 [node name="Socket5" parent="." instance=ExtResource("5_7jktm")]
-position = Vector2(327, 454)
+position = Vector2(326, 455)
 SocketName = "Right"
 
 [node name="Socket6" parent="." instance=ExtResource("5_7jktm")]
@@ -48,11 +48,11 @@ position = Vector2(195, 194)
 SocketName = "ULTurret"
 
 [node name="Socket7" parent="." instance=ExtResource("5_7jktm")]
-position = Vector2(195, 716)
+position = Vector2(196, 715)
 SocketName = "BLTurret"
 
 [node name="Socket8" parent="." instance=ExtResource("5_7jktm")]
-position = Vector2(973, 716)
+position = Vector2(975, 715)
 SocketName = "BRTurret"
 
 [node name="Socket9" parent="." instance=ExtResource("5_7jktm")]

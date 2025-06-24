@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dbg707xbg651t"]
+[gd_scene load_steps=14 format=4 uid="uid://dbg707xbg651t"]
 
 [ext_resource type="TileSet" uid="uid://bs4bhy03sinky" path="res://assets/new_tile_set.tres" id="1_ubfh8"]
 [ext_resource type="Script" uid="uid://byvvmm84glef7" path="res://scripts/Mech.cs" id="2_27ga2"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://4i58sbwgl6jd" path="res://scripts/Drill.cs" id="5_yokb4"]
 [ext_resource type="Script" uid="uid://b8s5qqwj3itam" path="res://scripts/Enemy.cs" id="6_pbtuc"]
 [ext_resource type="Texture2D" uid="uid://civkduyrsksdg" path="res://assets/sprites/EndPoint_Red.png" id="6_sbb53"]
+[ext_resource type="SpriteFrames" uid="uid://bp0775ya08d1o" path="res://assets/tread_frames.tres" id="7_n068f"]
+[ext_resource type="Script" uid="uid://bx84x2mcmj0jx" path="res://scripts/Tread.cs" id="8_g8a64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_444vf"]
 size = Vector2(585, 452)
@@ -53,19 +55,6 @@ render_target_update_mode = 4
 [node name="Game" parent="Mech/SubViewportContainer/SubViewport" instance=ExtResource("2_444vf")]
 metadata/_edit_lock_ = true
 
-[node name="ULTurret" parent="Mech" instance=ExtResource("4_sbb53")]
-position = Vector2(-519, -387)
-
-[node name="URTurret" parent="Mech" instance=ExtResource("4_sbb53")]
-position = Vector2(527, -388)
-
-[node name="BLTurret" parent="Mech" instance=ExtResource("4_sbb53")]
-position = Vector2(-514, 385)
-scale = Vector2(1, 1.00253)
-
-[node name="BRTurret" parent="Mech" instance=ExtResource("4_sbb53")]
-position = Vector2(511, 383)
-
 [node name="Drill" type="Area2D" parent="Mech"]
 position = Vector2(0, -810)
 script = ExtResource("5_yokb4")
@@ -79,12 +68,37 @@ metadata/_edit_lock_ = true
 sprite_frames = ExtResource("5_pbtuc")
 metadata/_edit_lock_ = true
 
+[node name="LeftTread" type="AnimatedSprite2D" parent="Mech"]
+position = Vector2(-740, 0)
+sprite_frames = ExtResource("7_n068f")
+script = ExtResource("8_g8a64")
+
+[node name="RightTread" type="AnimatedSprite2D" parent="Mech"]
+position = Vector2(740, 0)
+sprite_frames = ExtResource("7_n068f")
+script = ExtResource("8_g8a64")
+
+[node name="ULTurret" parent="Mech" instance=ExtResource("4_sbb53")]
+position = Vector2(-519, -387)
+
+[node name="URTurret" parent="Mech" instance=ExtResource("4_sbb53")]
+position = Vector2(527, -388)
+
+[node name="BLTurret" parent="Mech" instance=ExtResource("4_sbb53")]
+position = Vector2(-514, 385)
+scale = Vector2(1, 1.00253)
+
+[node name="BRTurret" parent="Mech" instance=ExtResource("4_sbb53")]
+position = Vector2(511, 383)
+
 [node name="Enemy" type="CharacterBody2D" parent="." groups=["Enemy"]]
-position = Vector2(428, 407)
+position = Vector2(-366, 507)
 script = ExtResource("6_pbtuc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 shape = SubResource("CircleShape2D_pbtuc")
+metadata/_edit_lock_ = true
 
 [node name="EndPointRed" type="Sprite2D" parent="Enemy"]
 texture = ExtResource("6_sbb53")
+metadata/_edit_lock_ = true
