@@ -9,9 +9,14 @@ public partial class Turret : Node2D
 	[Export] float Damage = 10;
 	[Export] float TurnSpeed = 1;
 	float FireClock = 0;
+	AnimatedSprite2D sprite;
+	AnimatedSprite2D flash;
 	public override void _Ready()
 	{
 		ray = GetNode<RayCast2D>("RayCast2D");
+		sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		flash = GetNode<AnimatedSprite2D>("Flash");
+		flash.AnimationFinished += () => flash.Visible = false;
 	}
 	public override void _PhysicsProcess(double delta)
 	{
@@ -20,7 +25,15 @@ public partial class Turret : Node2D
 		{
 			FireClock -= dt;
 		}
-		if (!powered) return;
+		if (powered)
+		{
+			sprite.Play("powered");
+		}
+		else
+		{
+			sprite.Play("default");
+			return;
+		}
 		// Turn toward closest target
 		Node2D target = null;
 		float range = Mathf.Inf;
@@ -56,6 +69,8 @@ public partial class Turret : Node2D
 				if (FireClock <= 0)
 				{
 					FireClock = FireTime;
+					flash.Visible = true;
+					flash.Play();
 					enemy.Damage(Damage);
 				}
 			}

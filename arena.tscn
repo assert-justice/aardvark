@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://bx84x2mcmj0jx" path="res://scripts/Tread.cs" id="8_g8a64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_444vf"]
-size = Vector2(585, 452)
+size = Vector2(1780, 948)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yokb4"]
 size = Vector2(369, 438)
@@ -31,7 +31,7 @@ position = Vector2(1018, 551)
 script = ExtResource("2_27ga2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mech"]
-position = Vector2(3.5, 0)
+position = Vector2(2, -1)
 shape = SubResource("RectangleShape2D_444vf")
 metadata/_edit_lock_ = true
 
